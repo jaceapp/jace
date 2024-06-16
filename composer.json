@@ -1,0 +1,51 @@
+{
+    "name": "jaceapp/jace",
+    "description": "Package extension of core",
+    "keywords": [
+        "chat"
+    ],
+    "homepage": "https://github.com/jaceapp/jace",
+    "license": "GPL-3.0",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Nick Klein",
+            "email": "1294247+nickklein@users.noreply.github.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "illuminate/support": "^8.0",
+        "predis/predis": "^2.2",
+        "spatie/laravel-permission": "^6.3"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "JaceApp\\Jace\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "JaceApp\\Jace\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "JaceApp\\Jace\\JaceServiceProvider"
+            ]
+        }
+    }
+}
