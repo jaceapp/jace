@@ -70,7 +70,7 @@ class InstallCommand extends Command
 
     private function copyWebsocket()
     {
-        (new Filesystem)->copyDirectory(__DIR__ . '/../../../ws-server', base_path('ws-server'));
+        (new Filesystem)->copyDirectory(__DIR__ . '/../../../websockets', base_path());
     }
 
     /**

@@ -19,7 +19,7 @@ class JaceDatabaseSeeder extends Seeder
         $users = config('auth.providers.users.model');
         $users::factory()->create([
             'name' => 'roadrunner',
-            'email' => 'roadruner@example.com',
+            'email' => 'roadrunner@example.com',
         ]);
 
         // Run all seeders

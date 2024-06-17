@@ -19,7 +19,7 @@ class RunSeederCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'yace:seed';
+    protected $signature = 'jace:seed';
 
     /**
      * The console Clean up user related things.
