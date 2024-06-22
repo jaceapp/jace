@@ -3,14 +3,11 @@
 namespace JaceApp\Jace\Console\Commands;
 
 use Illuminate\Console\Command;
-use Illuminate\Filesystem\Filesystem;
-use Symfony\Component\Process\Process;
 use JaceApp\Jace\Seeders\PermissionSeeder;
 use JaceApp\Jace\Seeders\RolePermissionsSeeder;
 use JaceApp\Jace\Seeders\RoleSeeder;
 use JaceApp\Jace\Seeders\UserRoleSeeder;
 use Illuminate\Support\Facades\Artisan;
-use JaceApp\Jace\Seeders\JaceUserProfileSeeder;
 
 class RunSeederCommand extends Command
 {

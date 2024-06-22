@@ -43,7 +43,7 @@ class InstallCommand extends Command
         $this->copyConfigs();
         $this->copyMigrations();
         $this->installComposerPackages();
-        $this->publishSpatie();
+        /* $this->publishSpatie(); */
         $this->copyWebsocket();
     }
 
@@ -90,12 +90,12 @@ class InstallCommand extends Command
      *
      * @return void
      */
-    private function publishSpatie()
-    {
-        $this->call('vendor:publish', [
-            '--provider' => 'Spatie\Permission\PermissionServiceProvider',
-        ]);
-    }
+    /* private function publishSpatie() */
+    /* { */
+    /*     $this->call('vendor:publish', [ */
+    /*         '--provider' => 'Spatie\Permission\PermissionServiceProvider', */
+    /*     ]); */
+    /* } */
 
     /**
      * Installs the given Composer Packages into the application.

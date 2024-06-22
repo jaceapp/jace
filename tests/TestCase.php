@@ -27,6 +27,11 @@ class TestCase extends Orchestra
     {
         parent::setUp();
 
+        // Ensure the SQLite database file exists
+        if (!file_exists(__DIR__.'/../database/database.sqlite')) {
+            file_put_contents(__DIR__.'/../database/database.sqlite', '');
+        }
+
         try {
             $this->runMigrations();
             $this->seedData();
@@ -37,7 +42,6 @@ class TestCase extends Orchestra
 
     public function runMigrations()
     {
-
         /* $this->loadLaravelMigrations(); */
         $this->loadMigrationsFrom(__DIR__.'/../database/migrations/');
         if (!Schema::hasTable('users')) {

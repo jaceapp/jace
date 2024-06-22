@@ -81,8 +81,6 @@ class JaceUserProfileRepository
      */
     public function findByName(string $username): array
     {
-        $user = config('auth.providers.users.model');
-        /* $user = $user::where('name', $username)->first(); */
         $user = JaceUserProfile::where('username', $username)->first();
 
         if (empty($user)) {
@@ -100,9 +98,7 @@ class JaceUserProfileRepository
      **/
     public function doesNameExist(string $username): bool
     {
-        $user = config('auth.providers.users.model');
-
-        return $user::where('name', $username)->exists();
+        return JaceUserProfile::where('username', $username)->exists();
     }
 
     /**
